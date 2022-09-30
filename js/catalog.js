@@ -11,16 +11,16 @@ function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
-  let option = document.createElement('option'); 
-  option.textContent = 'select item';
-  option.value = Product.allProducts[i].name;
-  selectElement.appendChild(option);
+  // let option = document.createElement('option'); 
+  // option.textContent = 'select item';
+  // option.value = Product.allProducts[0].name;
+  // selectElement.appendChild(option);
 
   for (let i in Product.allProducts) {
     let newOption =  document.createElement('option');
     newOption.textContent = Product.allProducts[i].name;
     newOption.value = Product.allProducts[i].name;
-    selectElement.appendChild(option);
+    selectElement.appendChild(newOption);
   }
 }
 
@@ -45,11 +45,16 @@ function handleSubmit(event) {
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   let item = document.getElementById('items').value;
+  for (let i = 0; i < Product.allProducts; i++){
+  if (Product.allProducts[i] === item){
+    Cart.push(item);
+  }
+ }
   // TODO: get the quantity
   let quantity = parseInt(document.getElementById('quantity').value);
   // TODO: using those, add one item to the Cart
   if (quantity >0){
-    cart.addItem(item. quantity);
+    cart.addItem(item, quantity);
   }else if (quantity === 0){
     }else {
 
