@@ -1,1 +1,25 @@
 /* TODO: Make it awesome */
+
+*{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  background-color: orchid;
+}
+header {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  background-color: orchid;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+li {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
